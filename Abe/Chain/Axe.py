@@ -16,15 +16,15 @@
 
 from .X11Chain import X11Chain
 
-class Dash(X11Chain):
+class Axe(X11Chain):
     def __init__(chain, **kwargs):
-        chain.name = 'Dash'
-        chain.code3 = 'DASH'
-        chain.address_version = '\x4c'
+        chain.name = 'Axe'
+        chain.code3 = 'AXE'
+        chain.address_version = '\x4b'
         chain.script_addr_vers = '\x05'
-        chain.magic = '\xbf\x0c\x6b\xbd'
+        chain.magic = '\xb5\xce\x6b\x04'
         X11Chain.__init__(chain, **kwargs)
 
-    datadir_conf_file_name = 'dash.conf'
-    datadir_rpcport = 9998
-    datadir_p2pport = 9999
+    datadir_conf_file_name = 'axe.conf'
+    datadir_rpcport = 9337
+    datadir_p2pport = 9937
