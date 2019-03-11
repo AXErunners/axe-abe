@@ -49,7 +49,7 @@ COPYRIGHT_URL = 'https://github.com/bitcoin-abe'
 
 DONATIONS_BTC = '1PWC7PNHL1SgvZaN7xEtygenKjWobWsCuf'
 DONATIONS_NMC = 'NJ3MSELK1cWnqUa6xhF2wUYAnz3RSrWXcK'
-DONATIONS_DASH = 'XvKkW3NJFhTr9hcgbV8EQcGqbCCshDS8vj'
+DONATIONS_AXE = '7mLZCucekeWCXYaiR93BThq9TdYc1ZS7Tw'
 
 TIME1970 = time.strptime('1970-01-01','%Y-%m-%d')
 EPOCH1970 = calendar.timegm(TIME1970)
@@ -82,7 +82,7 @@ DEFAULT_TEMPLATE = """
             Axe Explorer powered by <a href="%(ABE_URL)s">%(APPNAME)s</a>.
         </span>
         %(download)s
-        <a href="%(dotdot)saddress/%(DONATIONS_DASH)s">Donate</a> some coins, if you like it.
+        <a href="%(dotdot)saddress/%(DONATIONS_AXE)s">Donate</a> some coins, if you like it.
     </p>
 </div>
 </div>
@@ -2055,7 +2055,7 @@ def create_conf():
             "COPYRIGHT_URL": COPYRIGHT_URL,
             "DONATIONS_BTC": DONATIONS_BTC,
             "DONATIONS_NMC": DONATIONS_NMC,
-            "DONATIONS_DASH": DONATIONS_DASH,
+            "DONATIONS_AXE": DONATIONS_AXE,
             "CONTENT_TYPE": DEFAULT_CONTENT_TYPE,
             "HOMEPAGE": DEFAULT_HOMEPAGE,
             },
