@@ -1300,7 +1300,7 @@ store._ddl['txout_approx'],
                   JOIN block b ON (obt.block_id = b.block_id)
                  WHERE bti.block_id = ? AND txin.tx_id = ?""",
                                             (block_id, tx_id)):
-                destroyed += txout_value * (nTime - block_nTime)
+                destroyed += (txout_value * (nTime - block_nTime)) if txout_value is not None else 0
             block_ss_destroyed += destroyed
         return block_ss_destroyed
 
