@@ -338,7 +338,7 @@ class AbeVerify:
                   JOIN block b ON (obt.block_id = b.block_id)
                  WHERE bti.block_id = ? AND txin.tx_id = ?""",
                                             (block_id, tx_id)):
-                destroyed += txout_value * (nTime - block_nTime)
+                destroyed += (txout_value * (nTime - block_nTime)) if txout_value is not None else 0
             b['ss_destroyed'] += destroyed
 
         b['satoshi_seconds'] = prev_ss + ss_created - b['ss_destroyed']
@@ -354,7 +354,7 @@ class AbeVerify:
                   FROM tx
                   LEFT JOIN txout ON (tx.tx_id = txout.tx_id)
                  WHERE tx.tx_id = ?""", (tid,))
-            value_destroyed += destroyed
+            value_destroyed += destroyed if destroyed is not None else 0
 
         b['total_satoshis'] = prev_satoshis + b['value_out'] \
                               - b['value_in'] - value_destroyed
