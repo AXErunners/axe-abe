@@ -21,7 +21,7 @@ class Axe(X11Chain):
         chain.name = 'Axe'
         chain.code3 = 'AXE'
         chain.address_version = '\x37'
-        chain.script_addr_vers = '\x05'
+        chain.script_addr_vers = '\x10'
         chain.magic = '\xb5\xce\x6b\x04'
         X11Chain.__init__(chain, **kwargs)
 
